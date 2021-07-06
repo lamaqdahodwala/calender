@@ -3,8 +3,25 @@
 {% block content %} 
 <br><br>
 <div class="container">
-    <h1 class="title">Hello there, <a>{{user.username}}</a></h1>
-    <h3 class="subtitle">It is currently {% now "F jS, Y, g:i A e" %}</h3>
+    <div class="box is-fluid">
+        <h1 class="title">Hello there, <a>{{user.username}}</a></h1>
+        <h3 class="subtitle">It is currently {% now "F jS, Y" %}</h3>
+    </div>
+    <hr>
+    <br>
+    <div class="columns">
+        <div class="column is-10">
+            <h1 class="title is-5">Events today</h1>
+        </div>
+        <div class="column">
+            <button class="button is-info">Add a new event</button>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
 </div>
 
 {% endblock %} 
