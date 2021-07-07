@@ -1,12 +1,16 @@
 FROM python:3.8
 
 
-WORKDIR /
+WORKDIR /app
 
 
-RUN pip install -r requirements.txt
+COPY requirements.txt /app
 
+RUN python -m pip install -r requirements.txt
 
+COPY . /app
+
+WORKDIR /app/calender
 
 
 CMD [ "gunicorn", "calender.wsgi" ]
